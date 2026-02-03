@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByonesDownloader - Download Video YouTube</title>
+  <meta name="description" content="ByonesDownloader adalah alat gratis untuk mengunduh video YouTube milik sendiri atau berlisensi Creative Commons.">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111, #222);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    h1 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #00ccaa;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>ByonesDownloader</h1>
+    <p>Download video YouTube untuk kebutuhan pribadi & edukasi</p>
+
+    <input type="text" id="ytlink" placeholder="Tempel link YouTube di sini">
+
+    <button onclick="generateLink()">Generate Download</button>
+
+    <div class="info" id="result"></div>
+
+    <footer>
+      <p>
+        Dengan menggunakan ByonesDownloader, Anda menyetujui bahwa konten yang diunduh
+        adalah milik sendiri atau berlisensi Creative Commons.
+      </p>
+      <p>
+        © 2026 ByonesDownloader
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    function generateLink() {
+      const link = document.getElementById("ytlink").value;
+      const result = document.getElementById("result");
+
+      if (link === "") {
+        result.innerHTML = "⚠️ Masukkan link YouTube terlebih dahulu.";
+        return;
+      }
+
+      // SIMULASI (AMAN)
+      result.innerHTML = `
+        ✅ Link diterima.<br><br>
+        Pilih format:<br><br>
+        <a href="#" onclick="alert('Fitur ini perlu API pihak ketiga')">Download MP4</a><br>
+        <a href="#" onclick="alert('Fitur ini perlu API pihak ketiga')">Download MP3</a>
+        <br><br>
+        <small>File tidak disimpan di server kami.</small>
+      `;
+    }
+  </script>
+
+</body>
+</html>
